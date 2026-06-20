@@ -1,3 +1,14 @@
+mod world;
+mod grass;
+mod cell;
+mod terrain;
+
+use world::World;
+
 fn main() {
-    println!("Hello, world!");
+    let mut world = World::new(10, 10);
+
+    world.seed_grass();
+
+    world.render();
 }
