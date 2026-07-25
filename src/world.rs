@@ -66,4 +66,12 @@ impl World {
             }
         }
     }
+
+    pub fn tick(&mut self) {
+        for row in &mut self.cells{
+            for cell in row {
+                cell.tick();
+            }
+        }
+    }
 }
